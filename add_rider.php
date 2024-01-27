@@ -40,7 +40,7 @@
 								
 								<div class="form-group">
 									<label for="cname">Delivery Boy Mobile Number(Only Digit)</label>
-									<input type="text" id="dcharge"  maxlength="10" class="form-control" pattern="[0-9]+"  placeholder="Enter Delivery Boy Mobile Number" name="dcharge" required >
+									<input type="text" id="dcharge"  maxlength="14" class="form-control" pattern="[0-9]+"  placeholder="Enter Delivery Boy Mobile Number" name="dcharge" required >
 								</div>
 								
 									<div class="form-group">

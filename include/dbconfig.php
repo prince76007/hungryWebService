@@ -8,7 +8,7 @@
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 try {
   //Username, Password and Database
-  $con = new mysqli("localhost", "root", "", "hungry_grocery");
+  $con = new mysqli("localhost", "ksbmnewi_prince", "ksbmPrince", "ksbmnewi_hungry_grocery");
   $con->set_charset("utf8mb4");
 } catch(Exception $e) {
   error_log($e->getMessage());
@@ -19,7 +19,6 @@ $fetch_main = $con->query("select * from main_setting")->fetch_assoc();
 
 date_default_timezone_set($fset['timezone']);
 $dirname = dirname( dirname(__FILE__) ).'/api';
-
 
 ?>
 

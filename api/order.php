@@ -10,8 +10,11 @@ else
     
 $uid =  $data['uid'];
 $ddate = $data['ddate'];
-$a = explode('/',$ddate);
-$ddate = $a[2].'-'.$a[1].'-'.$a[0];
+$a=null;
+if (strpos($ddate,'/') !== false) {
+    $a = explode('/',$ddate);
+    $ddate = $a[2].'-'.$a[1].'-'.$a[0];
+}
 $timesloat = $data['timesloat'];
 $oid ='#'.uniqid();
 $pname = $data['pname'];

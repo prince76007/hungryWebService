@@ -23,8 +23,14 @@ else
 	  $g['total'] = $row['total'];
       $rdata = $con->query("select * from rider where id=".$row['rid']."")->fetch_assoc();
 	  $g['rider_status'] = $row['r_status'];
-	  $g['rider_name'] = $rdata['name'];
-	  $g['rider_mobile'] = $rdata['mobile'];
+    if(isset($rdata)){
+      $g['rider_name'] = $rdata['name'];
+      $g['rider_mobile'] = $rdata['mobile'];
+    }else{
+      // $g['rider_name'] = null;
+      // $g['rider_mobile'] = null
+    }
+	  
       $po[] = $g;
       
   }

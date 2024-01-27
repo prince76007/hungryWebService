@@ -182,7 +182,7 @@ else
                                     <td><?php echo $row['order_date'];?></td>
 									
                                     <td><?php echo $row['id'];?></td>
-                                   <td><?php $rdata = $con->query("select * from rider where id=".$row['rid']."")->fetch_assoc(); if($rdata['name'] == '') {echo '';}else {echo $rdata['name'];}?>
+                                   <td><?php $rdata = $con->query("select * from rider where id=".$row['rid']."")->fetch_assoc(); if(!isset($rdata) || $rdata['name'] == '') {echo '';}else {echo $rdata['name'];}?>
                                     <td><?php if($row['a_status'] == 0){echo 'Not Assign';}else if($row['a_status'] == 1){echo 'Assign';}else if($row['a_status'] == 2) {echo 'Accepted';}else if($row['a_status'] == 3){echo 'Completed';}else if($row['a_status'] == 4){echo 'Cancelled';} else 
 										{echo 'Rejected';}?></td>
 										<td><?php

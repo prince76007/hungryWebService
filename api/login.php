@@ -19,7 +19,7 @@ if($chek->num_rows != 0)
 {
     $c = $con->query("select * from user where (mobile='".$mobile."' or email='".$mobile."')  and status = 1 and password='".$password."'");
     $c = $c->fetch_assoc();
-    $dc = $con->query("select * from area_db where name='".$c['area']."'");
+    $dc = $con->query("select * from area_db where id>1 limit 1");
     $vb = $dc->fetch_assoc();
     $returnArr = array("user"=>$c,"d_charge"=>$vb['dcharge'],"ResponseCode"=>"200","Result"=>"true","ResponseMsg"=>"Login successfully!");
 }

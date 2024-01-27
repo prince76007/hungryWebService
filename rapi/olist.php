@@ -50,7 +50,7 @@ else
 $dc = $con->query("select * from area_db where name='".$c['area']."'");
             $dc = $dc->fetch_assoc();
 			
-			if($p_method == 'Pickup myself')
+			if($row['p_method'] == 'Pickup myself')
 			{
 				$px = 0;
 			}
